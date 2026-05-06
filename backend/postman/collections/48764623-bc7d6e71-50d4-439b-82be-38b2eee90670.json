@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "48764623-bc7d6e71-50d4-439b-82be-38b2eee90670",
+		"name": "Library Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Get usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"id": "48764623-a6f3d2c4-70cd-40d1-93db-674c58fff368",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Post usuarios",
+					"id": "48764623-e57bc560-6f7f-4d70-9aa2-757262e4f93e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/usuarios",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch usuario",
+					"id": "48764623-3e4a84a3-3bf0-4cdb-851e-bd4d0c134f25",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mario1@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/usuarios/3",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put usuario",
+					"id": "48764623-f1013e27-8407-4d95-abed-453cb34e8aaf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"\"\r\n    \"email\": \"mario1@example.com\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/usuarios/3",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuario ID",
+					"id": "48764623-d8406bb5-9eea-4f7b-ba18-6abc7b58f4ab",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete usuario",
+					"id": "48764623-96c649f8-3269-4ce3-9bd2-f8ee32fff354",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "48764623-d94cc188-5477-47a8-ab7d-f1defc9395b0"
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Post autores",
+					"id": "48764623-859f3e9e-a3a1-483c-bb99-cdad02e74424",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/autores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get autores",
+					"id": "48764623-469855c6-24ee-4da2-b261-0e1c66c5a8bb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/autores",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put autores",
+					"id": "48764623-b3655561-ca1c-4326-9eb3-39bcc27e2601",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nombre\": \"Brandon Sanderson\" }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/autores/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch autor",
+					"id": "48764623-fa60d50d-bf53-403e-8eb4-a6ac3a0cae09",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nombre\": \"Brandon Sanderson\" \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/autores/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get autor ID",
+					"id": "48764623-2905edfd-93ea-4c14-b0b3-e6194fc5ddc3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete autor",
+					"id": "48764623-45707423-ff81-4c32-a1f0-52f2002dc168",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"nombre\": \"Brandon Sanderson\" \r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/autores/4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"autores",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "48764623-701bbbe3-90d7-4d35-be72-f6497c77650b"
+		},
+		{
+			"name": "Libros",
+			"item": [
+				{
+					"name": "Post libros",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c27dc400-e020-4bc6-afc6-37d03f5ff939",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"id": "48764623-867f034c-dde6-471d-83c0-f79d97812ba8",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"El heroe de las eras\",\n    \"disponible\": true,\n    \"autor\": {\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/libros",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"libros"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Patch libro",
+					"id": "48764623-3c84feea-f3be-4099-912c-8fcf9ae5d78a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"autor\": {\n        \"id\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/libros/10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"libros",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get libros",
+					"id": "48764623-b50c4d80-c353-43a5-b9c5-6d99efe96640",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get libro ID",
+					"id": "48764623-b48e3964-5fea-45e6-80c0-2c03e7b69196",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put libros",
+					"id": "48764623-05a7afd9-3026-46ff-b698-1836402f209b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Libro",
+					"id": "48764623-48c40575-9b26-4817-b66d-19c8253e949a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/libros/12",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"libros",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "48764623-4f38d3f7-ddb6-404d-a879-c24bf881af6e"
+		},
+		{
+			"name": "Reservas",
+			"item": [
+				{
+					"name": "Get reservas",
+					"id": "48764623-3185d3d4-5c43-42ef-8387-98eacc090cf1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/reservas",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post reservas",
+					"id": "48764623-7086d24f-e6e5-4875-931b-778ae720eec0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"autor\": {\n        \"id\": 1\n    }\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/reservas",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Devolver libro",
+					"id": "48764623-68592ddb-5a0d-4815-9041-a75184852a39",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reserva ID",
+					"id": "48764623-3d0da5f6-b46e-4bd9-8a4b-922b5ba5391d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put reserva",
+					"id": "48764623-f731fa79-9c91-43c8-a335-8899ebdd3b50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/reservas",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch reserva",
+					"id": "48764623-2bde0e3c-e4a8-4696-b838-34a3ae966d50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaDevolucion\": \"2025-09-26T15:00:00\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/reservas/5",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reservas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete reservas",
+					"id": "48764623-5a0a339c-1694-40bb-bc31-a7f5fa5ad39f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/reservas/6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reservas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get reservas de un usuario",
+					"id": "48764623-87e91d18-6732-456a-8eca-c707fe3444d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get libros reservados por un usuario",
+					"id": "48764623-cfbd6745-66ac-43d0-81ef-375c04b9e4c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "48764623-014659c5-1989-4468-92d2-02601ad6baea"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "28566ee8-e8a6-4bc8-a75a-635645417080",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ad626047-18ee-468d-ac83-0d5be9e131d3",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": ""
+		}
+	]
+}
