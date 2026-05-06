@@ -92,11 +92,13 @@ http://localhost:8080
 La documentación detallada de la API (endpoints, JSON, autenticación JWT, etc.) se encuentra en:
 
 ➡️ `/backend/README.md`
+```
 
 
 
-💻 Frontend (React)
+### 💻 Frontend (React)
 
+```bash
 cd frontend
 npm install
 npm start
@@ -104,6 +106,8 @@ npm start
 
 Frontend:
 http://localhost:3000
+
+```
 
 
 🔗 Comunicación
