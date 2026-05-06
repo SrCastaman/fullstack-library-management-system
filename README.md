@@ -106,26 +106,28 @@ npm start
 
 Frontend:
 http://localhost:3000
-
 ```
 
 
-🔗 Comunicación
+## 🔗 Comunicación
 
 El frontend consume la API REST del backend mediante Axios.
 Todas las operaciones (usuarios, libros, reservas) se gestionan en tiempo real.
 
-📊 Estado del proyecto
+## 📊 Estado del proyecto
 
-✔ Backend funcional
-✔ Frontend funcional
-✔ CRUD completo
-✔ Sistema de reservas
-✔ Autenticación JWT
-✔ Panel administrativo
+- ✔ Backend funcional  
+- ✔ Frontend funcional  
+- ✔ CRUD completo  
+- ✔ Sistema de reservas  
+- ✔ Autenticación JWT  
+- ✔ Panel administrativo  
 
-📌 Mejoras futuras
-Deploy en cloud (Render / AWS / Docker)
-Refresh tokens
-Tests automatizados
-Mejoras UI/UX
+---
+
+## 📌 Mejoras futuras
+
+- Deploy en cloud (Render / AWS / Docker)  
+- Refresh tokens  
+- Tests automatizados  
+- Mejoras UI/UX  
