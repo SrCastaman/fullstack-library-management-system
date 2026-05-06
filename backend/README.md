@@ -51,6 +51,75 @@ La API tiene **usuarios, autores, libros y reservas**. En cada entidad tiene su 
 
 ---
 
+## 🔐 Autenticación (JWT)
+
+La API está protegida mediante autenticación basada en JSON Web Token (JWT) usando Spring Security.
+
+El sistema incluye un usuario administrador por defecto que debe autenticarse para acceder a los endpoints protegidos.
+
+---
+
+### 🔑 Login
+
+POST /api/login
+
+Ejemplo de credenciales:
+
+{
+  "username": "admin",
+  "password": "123"
+}
+
+---
+
+### 🎟️ Respuesta del servidor
+
+Si las credenciales son correctas, se devuelve un token JWT:
+
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9..."
+}
+
+---
+
+### 📡 Uso del token
+
+Para acceder a endpoints protegidos se debe incluir el token en el header:
+
+Authorization: Bearer <token>
+
+---
+
+### 🔒 Endpoints protegidos
+
+Todos los endpoints excepto /api/login requieren autenticación JWT:
+
+- Usuarios
+- Libros
+- Autores
+- Reservas
+
+---
+
+### 🧠 Seguridad implementada
+
+- Filtro JWT personalizado (JwtAuthenticationFilter)
+- Validación de firma del token
+- Expiración del token
+- Spring Security configurado con protección de rutas
+- Usuario administrador en memoria con rol ADMIN
+
+---
+
+### ⚙️ Flujo de seguridad
+
+1. Login en /api/login
+2. Validación de credenciales
+3. Generación de JWT
+4. Envío del token al frontend
+5. Uso del token en cada request
+6. Validación automática en Spring Security
+
 ## Endpoints
 
 ### Usuarios
